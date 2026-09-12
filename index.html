@@ -11,8 +11,15 @@
 
   <style>
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .fade-in {
@@ -20,9 +27,17 @@
     }
 
     @keyframes heartBeat {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
     }
 
     .heart-beat {
@@ -60,18 +75,9 @@
 
     function celebrateYes() {
       document.getElementById("main-content").innerHTML = `
-        <h1 class="text-4xl font-bold text-rose-600 mb-4">
-          Yay, Catherine! 💕✨
+        <h1 class="text-4xl font-bold text-rose-600">
+          Yayy! I knew you would say yes! 💕
         </h1>
-
-        <p class="text-gray-700 text-lg mb-6">
-          You just made my day extra special ❤️
-          <span class="heart-beat inline-block">💕</span>
-        </p>
-
-        <p class="text-gray-600">
-          I’m looking forward to spending time with you 🌹✨
-        </p>
       `;
 
       const duration = 8000;
@@ -126,15 +132,17 @@
 
       <div class="flex justify-center space-x-4">
 
-        <button onclick="celebrateYes()"
-                class="bg-rose-600 text-white px-6 py-2 rounded-lg hover:bg-rose-700 transition">
+        <button
+          onclick="celebrateYes()"
+          class="bg-rose-600 text-white px-6 py-2 rounded-lg hover:bg-rose-700 transition">
           Yes 💌
         </button>
 
-        <button id="no-btn"
-                onmouseover="moveNoButton()"
-                ontouchstart="moveNoButton()"
-                class="bg-gray-500 text-white px-6 py-2 rounded-lg transition">
+        <button
+          id="no-btn"
+          onmouseover="moveNoButton()"
+          ontouchstart="moveNoButton()"
+          class="bg-gray-500 text-white px-6 py-2 rounded-lg transition">
           No 🙈
         </button>
 
